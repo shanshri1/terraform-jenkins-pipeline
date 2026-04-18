@@ -1,15 +1,7 @@
-terraform {
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "~> 4.0"
-    }
-  }
-}
 provider "aws" {
   region = "eu-north-1"
-  access_key = "AKIARUYN6ESMAKMMQNB6"
-  secret_key = "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"
+  access_key = var.aws_access_key
+  secret_key = var.aws_secret_key
 }
 resource "aws_instance" "linux-VM" {
 
